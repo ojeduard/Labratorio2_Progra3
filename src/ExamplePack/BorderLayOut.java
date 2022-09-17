@@ -9,7 +9,7 @@ public class BorderLayOut extends JFrame {
     public BorderLayOut(){
 
         add(panel1);
-        setVisible(true);
+
         setBounds(500, 300, 500, 400);
 
 

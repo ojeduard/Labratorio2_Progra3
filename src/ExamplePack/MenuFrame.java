@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 
 public class MenuFrame extends JFrame {
-    BorderLayOut borderL;
+    BorderLayOut borderL = new BorderLayOut();
 
     JMenuItem salir;
     JMenuItem borderLayour;
@@ -90,6 +90,7 @@ public class MenuFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 //                borderL = new BorderLayOut();
+                borderL.setVisible(true);
                 borderLayour.addActionListener(this);
 
             }
