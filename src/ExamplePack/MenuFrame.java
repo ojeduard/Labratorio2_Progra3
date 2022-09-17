@@ -5,7 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class MenuFrame extends JFrame {
+    BorderLayOut borderL;
 
     JMenuItem salir;
     JMenuItem borderLayour;
@@ -18,6 +20,7 @@ public class MenuFrame extends JFrame {
 
         setVisible(true);
         setBounds(500, 300, 500, 400);
+
     }
 
     class MenuLamina extends JPanel{
@@ -39,8 +42,8 @@ public class MenuFrame extends JFrame {
             salir.addActionListener(cerrar);
 
             borderLayour = new JMenuItem("BorderLayout");
-            GestioanBorderLayout borderL = new GestioanBorderLayout();
-            borderLayour.addActionListener(borderL);
+            GestionarBorderLayout presentarBorderLayout = new GestionarBorderLayout();
+            borderLayour.addActionListener(presentarBorderLayout);
 
             JMenuItem gridLayout = new JMenuItem("GridLayout");
             JMenuItem flowLayout = new JMenuItem("FlowLayout");
@@ -64,8 +67,6 @@ public class MenuFrame extends JFrame {
             ejemplos.add(gridBadLayout);
             ejemplos.add(cardLayout);
 
-//            opciones.add(opcion);
-//            ejemplos.add(opciones);
 
 
 
@@ -84,22 +85,17 @@ public class MenuFrame extends JFrame {
             }
         }
 
-        private class GestioanBorderLayout implements ActionListener{
+        private class GestionarBorderLayout implements ActionListener{
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame();
-                JPanel otroPanel = new JPanel();
-                frame.add(otroPanel);
-                frame.setBounds(500, 300, 500, 400);
-                frame.setVisible(true);
-                BorderLayout borderLayout = new BorderLayout();
-                frame.setLayout(borderLayout);
+//                borderL = new BorderLayOut();
                 borderLayour.addActionListener(this);
-                frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
             }
         }
+
+
     }
 
 
