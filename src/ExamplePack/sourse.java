@@ -13,13 +13,13 @@ public class sourse {
 // Check List de los componentes utilizados
 // JText
 // JTextField
-// JTextArea
+// JTextArea -> Listo
 // JScrollBar
 // JPanel -> Listo
 // JOptionPane
 // JMenu -> Listo
-// JList
+// JList -> Listo
 // JLabel -> Listo
 // JComboBox
-// JButton
+// JButton -> Listo
 // JTabbedPane

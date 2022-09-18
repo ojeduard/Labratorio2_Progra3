@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 public class MenuFrame extends JFrame {
     Dialog dialog = new Dialog(MenuFrame.this);
     BorderLayOut borderL = new BorderLayOut();
+    GridLayOut gridL = new GridLayOut();
 
     // Estos son todos los MenuItem que se utilizaran
     JMenuItem salir;
@@ -57,6 +58,7 @@ public class MenuFrame extends JFrame {
             // Agregar las acciones de cada componente
             salir.addActionListener(new GestionaSalir());
             borderLayour.addActionListener(new GestionarBorderLayout());
+            gridLayout.addActionListener(new GestionarGridLayout());
             infoGruop.addActionListener(new GestionarAcercaDe());
 
             //Agregar los componentes de JMenu dentro de la barra
@@ -97,6 +99,15 @@ public class MenuFrame extends JFrame {
                 borderL.setVisible(true);
                 borderL.setLocationRelativeTo(borderLayour);
 
+            }
+        }
+
+        private class GestionarGridLayout implements ActionListener{
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gridL.setVisible(true);
+                gridL.setLocationRelativeTo(gridLayout);
             }
         }
 
