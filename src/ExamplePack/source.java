@@ -2,7 +2,7 @@ package ExamplePack;
 
 import javax.swing.*;
 
-public class sourse {
+public class source {
 
     public static void main(String[] args) {
         MenuFrame menuFrame = new MenuFrame();
