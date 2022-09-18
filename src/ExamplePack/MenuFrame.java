@@ -100,11 +100,5 @@ public class MenuFrame extends JFrame {
     }
 
 
-
-    public static void main(String[] args) {
-        MenuFrame menuFrame = new MenuFrame();
-        menuFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-    }
-
 }
 //
