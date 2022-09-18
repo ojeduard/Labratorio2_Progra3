@@ -11,12 +11,11 @@ public class source {
     }
 }
 // Check List de los componentes utilizados
-// JText
-// JTextField
+// JTextField -> Listo
 // JTextArea -> Listo
 // JScrollBar
 // JPanel -> Listo
-// JOptionPane
+// JOptionPane -> Listo
 // JMenu -> Listo
 // JList -> Listo
 // JLabel -> Listo
