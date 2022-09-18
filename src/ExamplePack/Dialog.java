@@ -9,11 +9,14 @@ public class Dialog extends JDialog {
         setTitle("Dialog");
         setModal(true);
         JTextPane infoGrupo = new JTextPane();
-        infoGrupo.setText("\tLaboratorio 2 del Curso de Programacion 3\n\n" +
-                "Intregrantes del grupo:\n\n" +
-                "Eduardo Aaron Ojeda Paladino\n" +
-                "Victor David Coto Solano\n" +
-                "Jose Luis Valverde");
+        infoGrupo.setText("""
+                \tLaboratorio 2 del Curso de Programacion 3
+
+                Intregrantes del grupo:
+
+                Eduardo Aaron Ojeda Paladino
+                Victor David Coto Solano
+                Jose Luis Valverde""");
         setSize(400, 200);
         infoGrupo.setEditable(false);
         add(infoGrupo);

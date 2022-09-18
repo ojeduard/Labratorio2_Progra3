@@ -18,6 +18,7 @@ public class GridLayOut extends JFrame{
 
 
     public GridLayOut() {
+
         add(panel1);
         setSize(650, 400);
 
@@ -44,4 +45,5 @@ public class GridLayOut extends JFrame{
         });
 
     }
+
 }

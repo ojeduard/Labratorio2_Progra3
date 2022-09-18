@@ -1,7 +1,6 @@
 package ExamplePack;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class BorderLayOut extends JFrame {
     private JPanel panel1;
