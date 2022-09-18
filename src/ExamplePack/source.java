@@ -16,7 +16,7 @@ public class source {
 // JScrollBar
 // JPanel -> Listo
 // JOptionPane -> Listo
-// JMenu -> Listo
+// JMenu -> Listo c
 // JList -> Listo
 // JLabel -> Listo
 // JComboBox
