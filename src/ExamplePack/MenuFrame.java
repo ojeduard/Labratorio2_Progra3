@@ -1,16 +1,24 @@
 package ExamplePack;
 
 import javax.swing.*;
+import javax.swing.text.JTextComponent;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
 public class MenuFrame extends JFrame {
+    Dialog dialog = new Dialog(MenuFrame.this);
     BorderLayOut borderL = new BorderLayOut();
 
+    // Estos son todos los MenuItem que se utilizaran
     JMenuItem salir;
     JMenuItem borderLayour;
+    JMenuItem gridLayout;
+    JMenuItem infoGruop;
+    JMenuItem flowLayout;
+    JMenuItem gridBadLayout;
+    JMenuItem cardLayout;
 
     public MenuFrame(){
 
@@ -37,22 +45,19 @@ public class MenuFrame extends JFrame {
 
             // Inicializar cada componente de JMenuItem
             salir = new JMenuItem("Salir");
-            // Agregar la accion que va a tener al dar click en salir
-            GestionaSalir cerrar = new GestionaSalir();
-            salir.addActionListener(cerrar);
 
             borderLayour = new JMenuItem("BorderLayout");
-            GestionarBorderLayout presentarBorderLayout = new GestionarBorderLayout();
-            borderLayour.addActionListener(presentarBorderLayout);
+            gridLayout = new JMenuItem("GridLayout");
+            flowLayout = new JMenuItem("FlowLayout");
+            gridBadLayout = new JMenuItem("GridBadLayout");
+            cardLayout = new JMenuItem("CardLayout");
 
-            JMenuItem gridLayout = new JMenuItem("GridLayout");
-            JMenuItem flowLayout = new JMenuItem("FlowLayout");
-            JMenuItem gridBadLayout = new JMenuItem("GridBadLayout");
-            JMenuItem cardLayout = new JMenuItem("CardLayout");
+            infoGruop = new JMenuItem("Informacion del grupo");
 
-//            JMenu opciones = new JMenu("Mas...");
-//            JMenuItem opcion = new JMenuItem("Opcion 1");
-
+            // Agregar las acciones de cada componente
+            salir.addActionListener(new GestionaSalir());
+            borderLayour.addActionListener(new GestionarBorderLayout());
+            infoGruop.addActionListener(new GestionarAcercaDe());
 
             //Agregar los componentes de JMenu dentro de la barra
             miBarra.add(inicio);
@@ -66,8 +71,7 @@ public class MenuFrame extends JFrame {
             ejemplos.add(flowLayout);
             ejemplos.add(gridBadLayout);
             ejemplos.add(cardLayout);
-
-
+            acercaDe.add(infoGruop);
 
 
             //Agregar la barra dentro del MenuLamina
@@ -81,7 +85,7 @@ public class MenuFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
-                salir.addActionListener(this);
+
             }
         }
 
@@ -91,11 +95,21 @@ public class MenuFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
 //                borderL = new BorderLayOut();
                 borderL.setVisible(true);
-                borderLayour.addActionListener(this);
+                borderL.setLocationRelativeTo(borderLayour);
 
             }
         }
 
+
+        private class GestionarAcercaDe implements ActionListener{
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dialog.setVisible(true);
+                dialog.setLocationRelativeTo(MenuFrame.this);
+//
+            }
+        }
 
     }
 
