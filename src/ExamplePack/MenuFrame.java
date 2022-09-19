@@ -11,6 +11,7 @@ public class MenuFrame extends JFrame {
     GridLayOut gridL = new GridLayOut();
     FlowLayOut flowL = new FlowLayOut();
     Cards cardL = new Cards();
+    GridBagLayOut gbagL = new GridBagLayOut();
 
     // Estos son todos los MenuItem que se utilizaran
     JMenuItem salir;
@@ -61,6 +62,7 @@ public class MenuFrame extends JFrame {
             gridLayout.addActionListener(new GestionarGridLayout());
             flowLayout.addActionListener(new GestionarFlowLayout());
             cardLayout.addActionListener(new GestionarCardLayout());
+            gridBadLayout.addActionListener(new GestionarGBagLayout());
             infoGruop.addActionListener(new GestionarAcercaDe());
 
             //Agregar los componentes de JMenu dentro de la barra
@@ -136,6 +138,16 @@ public class MenuFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 dialog.setVisible(true);
                 dialog.setLocationRelativeTo(MenuFrame.this);
+//
+            }
+        }
+
+        private class GestionarGBagLayout implements ActionListener{
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gbagL.setVisible(true);
+                gbagL.setLocationRelativeTo(gridBadLayout);
 //
             }
         }

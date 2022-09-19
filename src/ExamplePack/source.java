@@ -13,12 +13,12 @@ public class source {
 // Check List de los componentes utilizados
 // JTextField -> Listo
 // JTextArea -> Listo
-// JScrollBar
+// JScrollBar -> Listo
 // JPanel -> Listo
 // JOptionPane -> Listo
 // JMenu -> Listo c
 // JList -> Listo
 // JLabel -> Listo
-// JComboBox
+// JComboBox -> Listo
 // JButton -> Listo
-// JTabbedPane
+// JTabbedPane -> Listo
